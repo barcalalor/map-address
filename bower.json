@@ -1,0 +1,10 @@
+{
+  "name": "map-address",
+  "private": true,
+  "description": "Tooltip popup that show address on maps",
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "core-tooltip": "Polymer/core-tooltip#master",
+    "core-icon-button": "warpech/static-openstreetmap#master"
+  }
+}

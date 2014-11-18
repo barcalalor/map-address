@@ -1,0 +1,43 @@
+<link rel="import"
+      href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-tooltip/core-tooltip.html">
+<link rel="import" href="../components/static-openstreetmap/src/static-openstreetmap.html">
+
+
+
+<polymer-element name="map-address">
+    <template>
+
+        <style>
+
+        </style>
+        <style shim-shadowdom>
+            core-tooltip.fancy::shadow .core-tooltip {
+                opacity: 0;
+                -webkit-transition: all 300ms cubic-bezier(0,1.92,.99,1.07);
+                transition: all 300ms cubic-bezier(0,1.92,.99,1.07);
+                -webkit-transform: translate3d(0, -10px, 0);
+                transform: translate3d(0, -10px, 0);
+            }
+            core-tooltip.fancy:hover::shadow .core-tooltip,
+            core-tooltip.fancy:focus::shadow .core-tooltip {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        </style>
+
+        <core-tooltip  role="tooltip" tabindex="0" large>
+            <!-- Change the address -->
+        <div class="rich">Demo</div>
+            <div tip>
+                <!-- insert on query the name in this format "Street number,city"-->
+                <static-openstreetmap query="" width="250" height="250" zoom="17"></static-openstreetmap>
+            </div>
+        </core-tooltip>
+    </template>
+    <script>
+        Polymer({
+        });
+    </script>
+</polymer-element>
